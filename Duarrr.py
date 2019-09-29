@@ -1,14 +1,19 @@
+#Project The Sims Simulator
+
+
+#------------------------------------------------------------------------------------------------------------------------------------
+
 import subprocess, platform #buat bersihin terminal
 
-#Kondisi awal permainan
-Hygiene = 0
-Energy = 10
-Fun = 0
+#Kondisi awal permainan - kondisi: Bangun tidur
+Hygiene = 0 #Bangun tidur ku terus mandi
+Energy = 10 #Bangun tidur sih harusnya seger
+Fun = 0 #Kok dia bangun tidur sedih sih :(
 
 
 #MainMenu
 def MainMenu():
-    print("SELAMAT DATANG DI PERMAINAN DE SIMS DUARRRR!!!!")
+    print("SELAMAT DATANG DI PERMAINAN THE SIMS SIMULATOR DUARRRR!!!!")
     print("----------------------------------------------------")
     print(" ")
     print(" ")
@@ -31,10 +36,36 @@ def MainMenu():
     if (inputPemain == 1):
         bersihinTerminal()
         pilihTidur()
-    if (inputPemain == 2):
+    elif (inputPemain == 2):
         bersihinTerminal()
         pilihMakan()
-
+    elif (inputPemain == 3):
+        bersihinTerminal()
+        pilihMinum()
+    elif (inputPemain == 4):
+        bersihinTerminal()
+        pilihBuangAir()
+    elif (inputPemain == 5):
+        bersihinTerminal()
+        pilihKeKafe()
+    elif (inputPemain == 6):
+        bersihinTerminal()
+        pilihMedSos()
+    elif (inputPemain == 7):
+        bersihinTerminal()
+        pilihKomputer()
+    elif (inputPemain == 8):
+        bersihinTerminal()
+        pilihMandi()
+    elif (inputPemain == 9):
+        bersihinTerminal()
+        pilihCuciTangan()
+    elif (inputPemain == 10):
+        bersihinTerminal()
+        pilihRadio()
+    elif (inputPemain == 11):
+        bersihinTerminal()
+        pilihMembaca()
 
 def bersihinTerminal():
     if platform.system()=="Windows":
@@ -92,7 +123,7 @@ def pilihTidur(): #Buat Tidur
             MainMenu()
     elif (a == 2):
         if ((Energy + 15) <= 15):
-            Energy = Energy + 10
+            Energy = Energy + 15
             bersihinTerminal()
             MainMenu()
         else:
@@ -259,7 +290,6 @@ def pilihKeKafe(): #Buat Nongki ke Kafe bray
         print("Aksi tidak valid")
         MainMenu()
 
-
 def pilihMedSos(): #Buat mainan medsos
     global Hygiene, Fun, Energy
     if ((Fun <= 5) and (Energy >= 10)):
@@ -281,6 +311,85 @@ def pilihKomputer(): #Buat nubes kali bray
         print("Aksi tidak valid")
         MainMenu()
 
+def pilihMandi(): #Buat mandi
+    global Hygiene, Energy
+    if ((Hygiene == 0) and (Energy >= 5)):
+            Energy = Energy - 5
+            Hygiene = Hygiene + 15
+            bersihinTerminal()
+            MainMenu()
+    else:
+        bersihinTerminal()
+        print("Aksi tidak valid")
+        MainMenu()
+
+def pilihCuciTangan(): #Buat cuci tangan
+    global Hygiene
+    if (Hygiene <= 10):
+            Hygiene = Hygiene + 5
+            bersihinTerminal()
+            MainMenu()
+    else:
+        bersihinTerminal()
+        print("Aksi tidak valid")
+        MainMenu()
+
+def pilihRadio(): #Buat mainan medsos
+    global Fun, Energy
+    if ((Fun <= 5) and (Energy >= 5)):
+            Energy = Energy - 5
+            Fun = Fun + 5
+            bersihinTerminal()
+            MainMenu()
+    else:
+        bersihinTerminal()
+        print("Aksi tidak valid")
+        MainMenu()
+
+def pilihMembaca(): #Buat membaca
+    global Energy, Fun
+    bersihinTerminal()
+    print("Mau baca apa nih???")
+    print("----------------------------")
+    print("")
+    print("")
+    print("1. Koran")
+    print("2. Novel")
+    print(" ")
+    print ("3. Kembali ke Main Menu")
+    a = int(input("Masukkan kode keinginan: "))
+    if (a == 1):
+        if ((Energy >= 5) and (Fun <= 10)):
+            Energy = Energy - 5
+            Fun = Fun + 5
+            bersihinTerminal()
+            MainMenu()
+        else:
+            bersihinTerminal()
+            print("")
+            print("")
+            print("Aksi tidak valid")
+            print("")
+            print("")
+            MainMenu()
+    elif (a == 2):
+        if ((Energy >= 5) and (Fun <= 5)):
+            Energy = Energy - 5
+            Fun = Fun + 10
+            bersihinTerminal()
+            MainMenu()
+        else:
+            bersihinTerminal()
+            print("Aksi tidak valid")
+            MainMenu()
+    elif (a == 3):
+        bersihinTerminal()
+        MainMenu()
+    else:
+            bersihinTerminal()
+            print("Aksi tidak valid")
+            MainMenu()
+
 
 
 #------------------------------------------------------------------------------------------------------------
@@ -290,3 +399,6 @@ def pilihKomputer(): #Buat nubes kali bray
 while(not (isFinished000() or isFinished151515() )):
     bersihinTerminal
     MainMenu()
+
+bersihinTerminal()
+print("Permainan Selesai!!")
