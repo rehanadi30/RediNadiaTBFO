@@ -14,10 +14,6 @@ Fun = 0 #Kok dia bangun tidur sedih sih :(
 #MainMenu
 def MainMenu():
     while(not (isFinished000() or isFinished151515() )):
-        print("SELAMAT DATANG DI PERMAINAN THE SIMS SIMULATOR DUARRRR!!!!")
-        print("----------------------------------------------------")
-        print(" ")
-        print(" ")
         tampilkanAtribut()
         print (" ")
         print (" ")
@@ -130,6 +126,9 @@ def pilihTidur(): #Buat Tidur
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 3):
         bersihinTerminal()
@@ -137,6 +136,9 @@ def pilihTidur(): #Buat Tidur
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
 
 def pilihMakan(): #Buat Makan
@@ -160,6 +162,9 @@ def pilihMakan(): #Buat Makan
             
         else:
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 2):
         if ((Energy + 10) <= 15):
@@ -169,6 +174,9 @@ def pilihMakan(): #Buat Makan
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 3):
         if ((Energy + 15) <= 15):
@@ -184,6 +192,9 @@ def pilihMakan(): #Buat Makan
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
 
 def pilihMinum(): #Buat Minum
@@ -207,6 +218,9 @@ def pilihMinum(): #Buat Minum
             
         else:
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 2): #Minum Kopi
         if ((Energy + 5) <= 15) and (Hygiene >= 10):
@@ -217,6 +231,9 @@ def pilihMinum(): #Buat Minum
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 3): #Minum Jus
         if (((Energy + 10) <= 15) and (Hygiene >= 5)):
@@ -226,6 +243,9 @@ def pilihMinum(): #Buat Minum
         else:
             bersihinTerminal
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 4):
         bersihinTerminal()
@@ -233,6 +253,9 @@ def pilihMinum(): #Buat Minum
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
 
 def pilihBuangAir(): #Buat Buang Air 
@@ -257,6 +280,7 @@ def pilihBuangAir(): #Buat Buang Air
             print("")
             print("")
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
             print("")
             print("")
             MainMenu()
@@ -269,6 +293,9 @@ def pilihBuangAir(): #Buat Buang Air
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 3):
         bersihinTerminal()
@@ -276,6 +303,9 @@ def pilihBuangAir(): #Buat Buang Air
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
 
 def pilihKeKafe(): #Buat Nongki ke Kafe bray
@@ -289,6 +319,9 @@ def pilihKeKafe(): #Buat Nongki ke Kafe bray
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("--------------------------------------------------------------------------")
+        print("")
+        print("")
         MainMenu()
 
 def pilihMedSos(): #Buat mainan medsos
@@ -301,6 +334,9 @@ def pilihMedSos(): #Buat mainan medsos
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("--------------------------------------------------------------------------")
+        print("")
+        print("")
         MainMenu()
 
 def pilihKomputer(): #Buat nubes kali bray
@@ -310,6 +346,9 @@ def pilihKomputer(): #Buat nubes kali bray
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("--------------------------------------------------------------------------")
+        print("")
+        print("")
         MainMenu()
 
 def pilihMandi(): #Buat mandi
@@ -322,6 +361,9 @@ def pilihMandi(): #Buat mandi
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("--------------------------------------------------------------------------")
+        print("")
+        print("")
         MainMenu()
 
 def pilihCuciTangan(): #Buat cuci tangan
@@ -333,6 +375,9 @@ def pilihCuciTangan(): #Buat cuci tangan
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("--------------------------------------------------------------------------")
+        print("")
+        print("")
         MainMenu()
 
 def pilihRadio(): #Buat mainan medsos
@@ -345,6 +390,9 @@ def pilihRadio(): #Buat mainan medsos
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("--------------------------------------------------------------------------")
+        print("")
+        print("")
         MainMenu()
 
 def pilihMembaca(): #Buat membaca
@@ -370,6 +418,7 @@ def pilihMembaca(): #Buat membaca
             print("")
             print("")
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
             print("")
             print("")
             MainMenu()
@@ -382,6 +431,9 @@ def pilihMembaca(): #Buat membaca
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
     elif (a == 3):
         bersihinTerminal()
@@ -389,6 +441,9 @@ def pilihMembaca(): #Buat membaca
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
             MainMenu()
 
 
@@ -397,9 +452,12 @@ def pilihMembaca(): #Buat membaca
 
 #ALGORITMA PERMAINAN
 
-while(not (isFinished000() or isFinished151515() )):
-    bersihinTerminal
-    MainMenu()
+bersihinTerminal
+print("SELAMAT DATANG DI PERMAINAN THE SIMS SIMULATOR DUARRRR!!!!")
+print("----------------------------------------------------")
+print(" ")
+print(" ")
+MainMenu()
 
 bersihinTerminal()
 print("Permainan Selesai!!")
