@@ -167,6 +167,9 @@ def pilihMakan(): #Buat Makan
             
         else:
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 2):
         if ((Energy + 10) <= 15):
@@ -176,6 +179,9 @@ def pilihMakan(): #Buat Makan
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 3):
         if ((Energy + 15) <= 15):
@@ -184,14 +190,20 @@ def pilihMakan(): #Buat Makan
         else:
             bersihinTerminal
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 4):
         bersihinTerminal()
         MainMenu()
     else:
-            bersihinTerminal()
-            print("Aksi tidak valid")
-            MainMenu()
+        bersihinTerminal()
+        print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
+        MainMenu()
 
 def pilihMinum(): #Buat Minum
     global Energy, Hygiene
@@ -214,6 +226,9 @@ def pilihMinum(): #Buat Minum
             
         else:
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 2): #Minum Kopi
         if ((Energy + 5) <= 15) and (Hygiene >= 10):
@@ -224,6 +239,9 @@ def pilihMinum(): #Buat Minum
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 3): #Minum Jus
         if (((Energy + 10) <= 15) and (Hygiene >= 5)):
@@ -233,6 +251,9 @@ def pilihMinum(): #Buat Minum
         else:
             bersihinTerminal
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 4):
         bersihinTerminal()
@@ -240,6 +261,9 @@ def pilihMinum(): #Buat Minum
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
 
 def pilihBuangAir(): #Buat Buang Air 
@@ -264,8 +288,9 @@ def pilihBuangAir(): #Buat Buang Air
             print("")
             print("")
             print("Aksi tidak valid")
-            print("")
-            print("")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 2):
         if ((Hygiene + 10) <= 15) and (Energy >= 5):
@@ -276,6 +301,9 @@ def pilihBuangAir(): #Buat Buang Air
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 3):
         bersihinTerminal()
@@ -283,6 +311,9 @@ def pilihBuangAir(): #Buat Buang Air
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
 
 def pilihKeKafe(): #Buat Nongki ke Kafe bray
@@ -296,6 +327,9 @@ def pilihKeKafe(): #Buat Nongki ke Kafe bray
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
         MainMenu()
 
 def pilihMedSos(): #Buat mainan medsos
@@ -308,6 +342,9 @@ def pilihMedSos(): #Buat mainan medsos
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
         MainMenu()
 
 def pilihKomputer(): #Buat nubes kali bray
@@ -317,6 +354,9 @@ def pilihKomputer(): #Buat nubes kali bray
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
         MainMenu()
 
 def pilihMandi(): #Buat mandi
@@ -329,6 +369,9 @@ def pilihMandi(): #Buat mandi
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
         MainMenu()
 
 def pilihCuciTangan(): #Buat cuci tangan
@@ -340,6 +383,9 @@ def pilihCuciTangan(): #Buat cuci tangan
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
         MainMenu()
 
 def pilihRadio(): #Buat mainan medsos
@@ -352,6 +398,9 @@ def pilihRadio(): #Buat mainan medsos
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
+        print("----------------------------------------")
+        print(" ")
+        print(" ")
         MainMenu()
 
 def pilihMembaca(): #Buat membaca
@@ -377,8 +426,9 @@ def pilihMembaca(): #Buat membaca
             print("")
             print("")
             print("Aksi tidak valid")
-            print("")
-            print("")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 2):
         if ((Energy >= 5) and (Fun <= 5)):
@@ -389,6 +439,9 @@ def pilihMembaca(): #Buat membaca
         else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
     elif (a == 3):
         bersihinTerminal()
@@ -396,6 +449,9 @@ def pilihMembaca(): #Buat membaca
     else:
             bersihinTerminal()
             print("Aksi tidak valid")
+            print("----------------------------------------")
+            print(" ")
+            print(" ")
             MainMenu()
 
 
@@ -410,5 +466,4 @@ print(" ")
 print(" ")
 
 MainMenu() #START GAME
-if((isFinished000() or isFinished151515())):
-    print("Permainan Selesai")
+print("Permainan Selesai") #END OF THE GAME
