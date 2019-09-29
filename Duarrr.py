@@ -165,6 +165,7 @@ def pilihMakan(): #Buat Makan
             print("--------------------------------------------------------------------------")
             print("")
             print("")
+            bersihinTerminal()
             MainMenu()
     elif (a == 2):
         if ((Energy + 10) <= 15):
@@ -181,6 +182,7 @@ def pilihMakan(): #Buat Makan
     elif (a == 3):
         if ((Energy + 15) <= 15):
             Energy = Energy + 15
+            bersihinTerminal()
             MainMenu()
         else:
             bersihinTerminal
@@ -234,11 +236,13 @@ def pilihMinum(): #Buat Minum
             print("--------------------------------------------------------------------------")
             print("")
             print("")
+            bersihinTerminal()
             MainMenu()
     elif (a == 3): #Minum Jus
         if (((Energy + 10) <= 15) and (Hygiene >= 5)):
             Energy = Energy + 10
             Hygiene = Hygiene - 5
+            bersihinTerminal()
             MainMenu()
         else:
             bersihinTerminal
@@ -246,6 +250,7 @@ def pilihMinum(): #Buat Minum
             print("--------------------------------------------------------------------------")
             print("")
             print("")
+            bersihinTerminal()
             MainMenu()
     elif (a == 4):
         bersihinTerminal()
