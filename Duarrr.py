@@ -1,6 +1,11 @@
 #Project The Sims Simulator
+#Creator: Rehan dan Nadia
 
+#Nama Pembuat 1: Rehan Adi Satrya
+#NIM Pembuat 1: 13518061
 
+#Nama Pembuat 2: Putri Nadia Salsabila
+#NIM Pembuat 2: 13518094
 #------------------------------------------------------------------------------------------------------------------------------------
 
 import subprocess, platform #buat bersihin terminal
@@ -13,59 +18,62 @@ Fun = 0 #Kok dia bangun tidur sedih sih :(
 
 #MainMenu
 def MainMenu():
-    print("SELAMAT DATANG DI PERMAINAN THE SIMS SIMULATOR DUARRRR!!!!")
-    print("----------------------------------------------------")
-    print(" ")
-    print(" ")
-    tampilkanAtribut()
-    print (" ")
-    print (" ")
-    print("Pilih aksi yang diinginkan")
-    print("1. Tidur")
-    print("2. Makan")
-    print("3. Minum")
-    print("4. Buang Air")
-    print("5. Bersosialisasi ke Kafe")
-    print("6. Bermain Media Sosial")
-    print("7. Bermain Komputer")
-    print("8. Mandi")
-    print("9. Cuci Tangan")
-    print("10. Mendengarkan Musik di Radio")
-    print("11. Membaca")
-    inputPemain = int(input("Masukkan nomor berapa yang anda inginkan: "))
-    if (inputPemain == 1):
-        bersihinTerminal()
-        pilihTidur()
-    elif (inputPemain == 2):
-        bersihinTerminal()
-        pilihMakan()
-    elif (inputPemain == 3):
-        bersihinTerminal()
-        pilihMinum()
-    elif (inputPemain == 4):
-        bersihinTerminal()
-        pilihBuangAir()
-    elif (inputPemain == 5):
-        bersihinTerminal()
-        pilihKeKafe()
-    elif (inputPemain == 6):
-        bersihinTerminal()
-        pilihMedSos()
-    elif (inputPemain == 7):
-        bersihinTerminal()
-        pilihKomputer()
-    elif (inputPemain == 8):
-        bersihinTerminal()
-        pilihMandi()
-    elif (inputPemain == 9):
-        bersihinTerminal()
-        pilihCuciTangan()
-    elif (inputPemain == 10):
-        bersihinTerminal()
-        pilihRadio()
-    elif (inputPemain == 11):
-        bersihinTerminal()
-        pilihMembaca()
+    while (not(isFinished000() or isFinished151515()) ):
+        tampilkanAtribut()
+        print (" ")
+        print (" ")
+        print("Pilih aksi yang diinginkan")
+        print("1. Tidur")
+        print("2. Makan")
+        print("3. Minum")
+        print("4. Buang Air")
+        print("5. Bersosialisasi ke Kafe")
+        print("6. Bermain Media Sosial")
+        print("7. Bermain Komputer")
+        print("8. Mandi")
+        print("9. Cuci Tangan")
+        print("10. Mendengarkan Musik di Radio")
+        print("11. Membaca")
+        inputPemain = str(input("Masukkan nomor berapa yang anda inginkan: "))
+        if (inputPemain == 1):
+            bersihinTerminal()
+            pilihTidur()
+        elif (inputPemain == 2):
+            bersihinTerminal()
+            pilihMakan()
+        elif (inputPemain == 3):
+            bersihinTerminal()
+            pilihMinum()
+        elif (inputPemain == 4):
+            bersihinTerminal()
+            pilihBuangAir()
+        elif (inputPemain == 5):
+            bersihinTerminal()
+            pilihKeKafe()
+        elif (inputPemain == 6):
+            bersihinTerminal()
+            pilihMedSos()
+        elif (inputPemain == 7):
+            bersihinTerminal()
+            pilihKomputer()
+        elif (inputPemain == 8):
+            bersihinTerminal()
+            pilihMandi()
+        elif (inputPemain == 9):
+            bersihinTerminal()
+            pilihCuciTangan()
+        elif (inputPemain == 10):
+            bersihinTerminal()
+            pilihRadio()
+        elif (inputPemain == 11):
+            bersihinTerminal()
+            pilihMembaca()
+        else:
+            bersihinTerminal()
+            print("Aksi tidak valid")
+            print("-----------------------------------------------------------------------")
+            print("")
+            MainMenu()
 
 def bersihinTerminal():
     if platform.system()=="Windows":
@@ -74,11 +82,11 @@ def bersihinTerminal():
         print("\033c", end="")
 
 #kondisi permainan
-def isFinished000():
+def isFinished000(): #Kalo kalah A.K.A 0 semua huhu :(
     global Energy, Hygiene, Fun
     return ((Energy == 0) and (Hygiene == 0) and (Fun == 0))
 
-def isFinished151515():
+def isFinished151515(): #Kalo menang A.K.A 15 semua HOREEEEE :)
     global Energy, Hygiene, Fun
     return ((Energy == 15) and (Hygiene == 15) and (Fun == 15))
 
@@ -94,7 +102,7 @@ def tampilkanAtribut(): #Digunakan untuk menampilkan atribut terkini
     print("3. Fun = " + str(Fun))
 
 
-
+#Fungsi-fungsi yang mempengaruhi atribut
 
 def pilihTidur(): #Buat Tidur 
     global Energy
@@ -396,9 +404,11 @@ def pilihMembaca(): #Buat membaca
 
 #ALGORITMA PERMAINAN
 
-while(not (isFinished000() or isFinished151515() )):
-    bersihinTerminal
-    MainMenu()
+print("SELAMAT DATANG DI PERMAINAN THE SIMS SIMULATOR DUARRRR!!!!")
+print("----------------------------------------------------")
+print(" ")
+print(" ")
 
-bersihinTerminal()
-print("Permainan Selesai!!")
+MainMenu() #START GAME
+if((isFinished000() or isFinished151515())):
+    print("Permainan Selesai")
