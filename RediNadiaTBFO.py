@@ -937,6 +937,9 @@ MainMenu()
 
 #Permainan selesai
 bersihinTerminal()
+tampilkanAtribut()
+print(" ")
+print(" ")
 print("Permainan Selesai!!")
 print("")
 print("")
