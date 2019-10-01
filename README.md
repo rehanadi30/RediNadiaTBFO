@@ -1,2 +1,0 @@
-# RediNadiaTBFO
-Buat TBFO eaaaaaaaa
