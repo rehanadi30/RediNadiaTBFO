@@ -15,12 +15,103 @@ Mata Kuliah:
 Teori Bahasa Formal dan Otomata - IF2124
 
 Definisi program:
-Program adalah
+Program adalah sebuah simulator kehidupan yang memiliki konsep mirip dengan permainan The Sims. Seperti yang kita ketahui, 
+The Sims adalah sebuah permainan yang mengharuskan sim kita tetap hidup dengan cara melakukan berbagai hal yang realistis alias ada di dunia nyata 
+seperti tidur, makan, dan buang air
 
+"""
+#Fungsi-fungsi yang digunakan
+"""
+def MainMenu():
+    I.S. Program dijalankan/aksi baru saja diberikan
+    F.S. program menampilkan atribut terkini, menu, dan meminta masukan sesuai aksi yang diinginkan 
 
+def bersihinTerminal():
+    I.S. terminal dalam keadaan sembarang
+    F.S. semua tulisan yang tercetak di terminal sebelum fungsi ini dipanggil terhapus
 
+def isFinished000():
+    mengembalikan benar ketika Hygiene, Fun, dan Energy bernilai 0
 
+def isFinished151515():
+    mengembalikan benar ketika Hygiene, Fun, dan Energy bernilai 15
 
+def tampilkanAtribut():
+    I.S. -
+    F.S. nilai atribut terkini tercetak di layar
+-------------------------------------------------------------------------------------------------------------------------------------
+def pilihTidur():
+    I.S. pemain memasukkan input perintah untuk tidur
+    F.S. mengubah nilai atribut sesuai jenis tidur yang dipilih. Jika setelah diubah, atribut tidak menyalahi aturan
+    1. Tidur siang : +10 Energy
+    2. Tidur malam : +15 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihMakan():
+    I.S. pemain memasukkan input perintah untuk makan
+    F.S. mengubah nilai atribut sesuai jenis makanan yang dipilih. Jika setelah diubah, atribut tidak menyalahi aturan
+    1. Hamburger : +5 Energy
+    2. Pizza : +10 Energy
+    3. Steak and Beans : +15 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihMinum():
+    I.S. pemain memasukkan input perintah untuk minum
+    F.S. mengubah nilai atribut sesuai jenis minuman yang dipilih. Jika setelah diubah, atribut tidak menyalahi aturan
+    1. Air : -5 Hygiene
+    2. Kopi : +5 Energy; -5 Hygiene
+    3. Jus : +10 Energy; -5 Hygiene
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihBuangAir():
+    I.S. pemain memasukkan input perintah untuk buang air
+    F.S. mengubah nilai atribut jika setelah diubah sesuai jenis buang airnya, atribut tidak menyalahi aturan
+    1. Buang air kecil: +5 Hygiene
+    2. Buang air besar: +10 Hygiene; -5 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihKeKafe():
+    I.S. pemain memasukkan input perintah untuk besosialisasi ke kafe
+    F.S. mengubah nilai atribut jika setelah diubah, atribut tidak menyalahi aturan
+    Perubahan: +15 fun; -10 energy; -5 hygiene
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihMedSos():
+    I.S. pemain memasukkan input perintah untuk bermain media sosial
+    F.S. mengubah nilai atribut jika setelah diubah, atribut tidak menyalahi aturan
+    Perubahan: +10 fun; -10 energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihKomputer():
+    I.S. pemain memasukkan input perintah untuk bermain komputer
+    F.S. mengubah nilai atribut jika setelah diubah, atribut tidak menyalahi aturan
+    Perubahan: +15 Fun; -10 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihMandi():
+    I.S. pemain memasukkan input perintah untuk mandi
+    F.S. mengubah nilai atribut jika setelah diubah, atribut tidak menyalahi aturan
+    Perubahan: +15 Hygiene; -5 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihCuciTangan():
+    I.S. pemain memasukkan input perintah untuk cuci tangan
+    F.S. mengubah nilai atribut jika setelah diubah, atribut tidak menyalahi aturan
+    Perubahan: +5 Hygiene 
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihRadio():
+    I.S. pemain memasukkan input perintah untuk mendengarkan musik di radio
+    F.S. mengubah nilai atribut jika setelah diubah, atribut tidak menyalahi aturan
+    Perubahan: +10 Fun; -5 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
+
+def pilihMembaca():
+    I.S. pemain memasukkan input perintah untuk membaca
+    F.S. mengubah nilai atribut sesuai jenis bacaan yang dipilih jika setelah diubah, atribut tidak menyalahi aturan
+    1. Koran: +5 Fun; -5 Energy
+    2. Novel: +10 Fun; -5 Energy
+    atau mencetak "Aksi tidak valid" dan kembali ke menu awal jika tidak memenuhi aturan
 
 
 """
@@ -140,10 +231,10 @@ def MainMenu():
         elif (inputPemain == ('10')):
             bersihinTerminal()
             pilihRadio()
-        elif (inputPemain == ("Radio")):
+        elif (inputPemain == ("Mendengarkan Musik di Radio")):
             bersihinTerminal()
             pilihRadio()
-        elif (inputPemain == ("radio")):
+        elif (inputPemain == ("mendengarkan musik di radio")):
             bersihinTerminal()
             pilihRadio()
         elif (inputPemain == ('11')):
@@ -197,9 +288,6 @@ def tampilkanAtribut(): #Digunakan untuk menampilkan atribut terkini
     print("1. Hygiene = " + str(Hygiene))
     print("2. Energy = " + str(Energy))
     print("3. Fun = " + str(Fun))
-
-
-
 
 def pilihTidur(): #Buat Tidur 
     global Energy
@@ -507,8 +595,8 @@ def pilihBuangAir(): #Buat Buang Air
     print("----------------------------")
     print("")
     print("")
-    print("1. Kencing")
-    print("2. BAB")
+    print("1. Buang Air Kecil")
+    print("2. Buang Air Besar")
     print(" ")
     print ("3. Kembali ke Main Menu")
     a = str(input("Masukkan kode keinginan: "))
@@ -540,7 +628,21 @@ def pilihBuangAir(): #Buat Buang Air
             print("")
             print("")
             MainMenu()
-    if (a == "kencing"):
+    elif (a == "kencing"):
+        if (Hygiene <= 10):
+            Hygiene = Hygiene + 5
+            bersihinTerminal()
+            MainMenu()
+        else:
+            bersihinTerminal()
+            print("")
+            print("")
+            print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
+            MainMenu()
+    elif (a == "Buang Air Kecil"):
         if (Hygiene <= 10):
             Hygiene = Hygiene + 5
             bersihinTerminal()
@@ -581,6 +683,19 @@ def pilihBuangAir(): #Buat Buang Air
             print("")
             MainMenu()
     elif (a == "bab"):
+        if ((Hygiene + 10) <= 15) and (5 <= Energy):
+            Energy = Energy - 5
+            Hygiene = Hygiene + 10
+            bersihinTerminal()
+            MainMenu()
+        else:
+            bersihinTerminal()
+            print("Aksi tidak valid")
+            print("--------------------------------------------------------------------------")
+            print("")
+            print("")
+            MainMenu()
+    elif (a == "Buang Air Besar"):
         if ((Hygiene + 10) <= 15) and (5 <= Energy):
             Energy = Energy - 5
             Hygiene = Hygiene + 10
@@ -643,8 +758,9 @@ def pilihMedSos(): #Buat mainan medsos
 
 def pilihKomputer(): #Buat nubes kali bray
     global Hygiene, Fun, Energy
-    if (Fun == 0):
+    if ((Fun == 0) and (Energy >= 10)):
             Fun = Fun + 15
+            Energy = Energy - 10
     else:
         bersihinTerminal()
         print("Aksi tidak valid")
